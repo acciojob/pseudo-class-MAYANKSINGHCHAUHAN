@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Selector Practice</title>
-    <style>
-        .selector {
-            color: #00f;
-            background-color: #eee;
-            font-family: Arial, sans-serif;
-            font-size: 20px;
-        }
-        #container {
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #000;
-            text-align: center;
-            position: relative;
-        }
-        #container::before {
-            content: "\2190 Special Start";
-            display: block;
-            color: #f00;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-        }
-        #container::after {
-            content: "Special End \2192";
-            display: block;
-            color: #f00;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-Elements Example</title>
+  <style>
+    /* Apply margin to the container */
+    #container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    /* Insert content before the container */
+    #container::before {
+      content: "Before Content"; /* Text to be displayed before */
+      color: #f00; /* Red color */
+      font-size: 20px; /* Font size */
+      display: block; /* Ensure it appears on a new line */
+      margin-bottom: 10px; /* Space between the pseudo-element and the container */
+    }
+
+    /* Insert content after the container */
+    #container::after {
+      content: "After Content"; /* Text to be displayed after */
+      color: #f00; /* Red color */
+      font-size: 20px; /* Font size */
+      display: block; /* Ensure it appears on a new line */
+      margin-top: 10px; /* Space between the pseudo-element and the container */
+    }
+  </style>
 </head>
 <body>
-    <p class="selector">This is Paragraph 1 with the class selector applied.</p>
-    <p>This is Paragraph 2 without the class selector.</p>
-    <p class="selector">This is Paragraph 3 with the class selector applied.</p>
-    <p>This is Paragraph 4 without the class selector.</p>
-    <div id="container">This is the main content of the container.</div>
+  <div id="container">
+    This is the main content of the container.
+  </div>
 </body>
 </html>
