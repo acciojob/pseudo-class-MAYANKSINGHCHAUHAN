@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector Practice</title>
+    <style>
+        .selector {
+            color: #00f;
+            background-color: #eee;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+        #container {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+            position: relative;
+        }
+        #container::before {
+            content: "\2190 Special Start";
+            display: block;
+            color: #f00;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #container::after {
+            content: "Special End \2192";
+            display: block;
+            color: #f00;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <p class="selector">This is Paragraph 1 with the class selector applied.</p>
+    <p>This is Paragraph 2 without the class selector.</p>
+    <p class="selector">This is Paragraph 3 with the class selector applied.</p>
+    <p>This is Paragraph 4 without the class selector.</p>
+    <div id="container">This is the main content of the container.</div>
 </body>
-
 </html>
